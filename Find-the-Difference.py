@@ -6,7 +6,7 @@ class Solution:
     def findTheDifference(self,s,t):
         sum1=0
         sum2=0
-        for i in s :
+        for i in s :  #the reason it is the best solution is it gives O(N) time complexity
             sum1=sum1+ord(i)
         for i in t :
             sum2=sum2+ord(i)

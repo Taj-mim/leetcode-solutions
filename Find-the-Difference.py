@@ -1,3 +1,7 @@
+"""
+The main issue with this solution is its givving O(nlog n)time complexity to minimize time 
+complexity it's better to use any other alternative solution which will minimize time 
+complexity"""
 
 class Solution:
     def findTheDifference(self, s, t):
@@ -12,3 +16,5 @@ t=input()
 
 sol =Solution()
 print(sol.findTheDifference(s,t))
+
+

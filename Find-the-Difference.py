@@ -1,20 +1,18 @@
 """
-The main issue with this solution is its givving O(nlog n)time complexity to minimize time 
-complexity it's better to use any other alternative solution which will minimize time 
-complexity"""
-
+As using sorted method and iterate the function using loop give O(nlog n)
+To mitimize that it's better to use ASCII value order 
+"""
 class Solution:
-    def findTheDifference(self, s, t):
-        l1=sorted(s)
-        l2=sorted(t)
-        for i in range(0,len(s)):
-            if(l2[i]!=l1[i]):
-                return l2[i]
-        return l2[-1]
-s=input()
+    def findTheDifference(self,s,t):
+        sum1=0
+        sum2=0
+        for i in s :
+            sum1=sum1+ord(i)
+        for i in t :
+            sum2=sum2+ord(i)
+        return chr(sum2-sum1)
+
+s = input()
 t=input()
-
-sol =Solution()
+sol=Solution()
 print(sol.findTheDifference(s,t))
-
-

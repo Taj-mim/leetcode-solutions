@@ -43,4 +43,5 @@ class Solution:
             return sorted (l,reverse=True)[2]
 nums= [2,2,3,1]
 sol=Solution()
-print(sol.thirdMax(nums))        
+print(sol.thirdMax(nums))        #time complexity for this is O(n log n)
+        

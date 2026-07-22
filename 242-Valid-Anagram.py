@@ -6,7 +6,7 @@ Output: true
 Example 2:
 Input: s = "rat", t = "car"
 Output: false"""
-
+from collections import Counter
 class Solution(object):
     def isAnagram(self, s, t):
         """
@@ -14,9 +14,12 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
+        #another way to solve this question using counter
+
         firstword=list(s)
         secondword=list(t)
-        return sorted(firstword)==sorted(secondword)
+        return Counter(firstword)==Counter(secondword)
+        #return sorted(firstword)==sorted(secondword)
 s=input()
 t=input()
 sol=Solution()

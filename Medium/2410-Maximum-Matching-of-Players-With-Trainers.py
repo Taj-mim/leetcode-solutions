@@ -26,3 +26,23 @@ Constraints:
 1 <= players[i], trainers[j] <= 109
  
 """
+class Solution(object):
+    def matchPlayersAndTrainers(self, players, trainers):
+        players.sort()
+        trainers.sort()
+        count=0
+        i=0
+        j=0
+        while(i<len(players) and j<len(trainers)):
+            if(players[i]<=trainers[j]):
+                i=i+1
+                j=j+1
+                count=count+1
+            else:
+                j=j+1
+                continue
+        return count
+g=list(map(int,input().split(',')))
+s=list(map(int,input().split(',')))
+sol=Solution()
+print(sol.matchPlayersAndTrainers(g,s))
